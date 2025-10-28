@@ -1,0 +1,1 @@
+/usr/bin/cc  -g -g CMakeFiles/exeWithDynLib.dir/src/app/main.c.o -o src/bin/exeWithDynLib  -Wl,-rpath,/home/vboxuser/training-linux/TP7-CMake/src/lib src/lib/libcalculatriceDyn.so 

@@ -1,0 +1,1 @@
+/usr/bin/cc  -g -g CMakeFiles/exeWithStatLib.dir/src/app/main.c.o -o src/bin/exeWithStatLib  src/lib/libcalculatriceStat.a 

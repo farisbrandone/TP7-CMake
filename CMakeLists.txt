@@ -13,11 +13,11 @@ set(SRC_DIR src)
 set(LIB_DIR ${SRC_DIR}/lib)
 set(BUILD_DIR ${SRC_DIR}/build)
 set(BIN_DIR ${SRC_DIR}/bin)
-set(INCLUDE_VAL ${SRC_DIR}/include)
+set(INCLUDE_VAL ${SRC_DIR}/includes)
 
 # Configuration des outputs
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${LIB_DIR})
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${BUILD_DIR})
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${LIB_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
 
 
@@ -27,8 +27,8 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BIN_DIR})
 add_library(calculatriceStat STATIC ${INCLUDE_VAL}/calculatrice.c)
 set_target_properties(calculatriceStat PROPERTIES
         LIBRARY_OUTPUT_DIRECTORY ${LIB_DIR}
-        ARCHIVE_OUTPUT_DIRECTORY ${BUILD_DIR})
-target_include_directories(calculatriceStat PRIVATE
+        ARCHIVE_OUTPUT_DIRECTORY ${LIB_DIR})
+target_include_directories(calculatriceStat PUBLIC
         ${INCLUDE_VAL}
     )
 
@@ -37,7 +37,7 @@ add_library(calculatriceDyn SHARED ${INCLUDE_VAL}/calculatrice.c)
 # Définir le répertoire de sortie spécifique
 set_target_properties(calculatriceDyn PROPERTIES
         LIBRARY_OUTPUT_DIRECTORY ${LIB_DIR}
-        ARCHIVE_OUTPUT_DIRECTORY ${BUILD_DIR})
+        ARCHIVE_OUTPUT_DIRECTORY ${LIB_DIR})
 target_include_directories(calculatriceDyn PUBLIC
         ${INCLUDE_VAL}
     )

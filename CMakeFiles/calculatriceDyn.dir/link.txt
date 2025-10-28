@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC  -g -g -shared -Wl,-soname,libcalculatriceDyn.so -o src/lib/libcalculatriceDyn.so CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o 

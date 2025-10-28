@@ -1,0 +1,2 @@
+/usr/bin/ar qc src/lib/libcalculatriceStat.a CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o
+/usr/bin/ranlib src/lib/libcalculatriceStat.a
