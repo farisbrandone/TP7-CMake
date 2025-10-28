@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wextra -g CMakeFiles/exe.dir/src/app/main.c.o -o src/bin/exe  -Wl,-rpath,"\$ORIGIN/../lib/calculatriceDyn" src/lib/calculatriceStat/libcalculatriceStat.a src/lib/calculatriceDyn/libcalculatriceDyn.so.1 

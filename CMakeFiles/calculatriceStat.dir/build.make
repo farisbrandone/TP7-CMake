@@ -69,36 +69,36 @@ include CMakeFiles/calculatriceStat.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/calculatriceStat.dir/flags.make
 
-CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o: CMakeFiles/calculatriceStat.dir/flags.make
-CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o: src/includes/calculatrice.c
-CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o: CMakeFiles/calculatriceStat.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/training-linux/TP7-CMake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o -MF CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o.d -o CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o -c /home/vboxuser/training-linux/TP7-CMake/src/includes/calculatrice.c
+CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o: CMakeFiles/calculatriceStat.dir/flags.make
+CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o: src/lib/calculatriceStat/calculatriceStat.c
+CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o: CMakeFiles/calculatriceStat.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/training-linux/TP7-CMake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o -MF CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o.d -o CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o -c /home/vboxuser/training-linux/TP7-CMake/src/lib/calculatriceStat/calculatriceStat.c
 
-CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vboxuser/training-linux/TP7-CMake/src/includes/calculatrice.c > CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.i
+CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vboxuser/training-linux/TP7-CMake/src/lib/calculatriceStat/calculatriceStat.c > CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.i
 
-CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vboxuser/training-linux/TP7-CMake/src/includes/calculatrice.c -o CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.s
+CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vboxuser/training-linux/TP7-CMake/src/lib/calculatriceStat/calculatriceStat.c -o CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.s
 
 # Object files for target calculatriceStat
 calculatriceStat_OBJECTS = \
-"CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o"
+"CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o"
 
 # External object files for target calculatriceStat
 calculatriceStat_EXTERNAL_OBJECTS =
 
-src/lib/libcalculatriceStat.a: CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o
-src/lib/libcalculatriceStat.a: CMakeFiles/calculatriceStat.dir/build.make
-src/lib/libcalculatriceStat.a: CMakeFiles/calculatriceStat.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vboxuser/training-linux/TP7-CMake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library src/lib/libcalculatriceStat.a"
+src/lib/calculatriceStat/libcalculatriceStat.a: CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o
+src/lib/calculatriceStat/libcalculatriceStat.a: CMakeFiles/calculatriceStat.dir/build.make
+src/lib/calculatriceStat/libcalculatriceStat.a: CMakeFiles/calculatriceStat.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vboxuser/training-linux/TP7-CMake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library src/lib/calculatriceStat/libcalculatriceStat.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/calculatriceStat.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/calculatriceStat.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/calculatriceStat.dir/build: src/lib/libcalculatriceStat.a
+CMakeFiles/calculatriceStat.dir/build: src/lib/calculatriceStat/libcalculatriceStat.a
 .PHONY : CMakeFiles/calculatriceStat.dir/build
 
 CMakeFiles/calculatriceStat.dir/clean:

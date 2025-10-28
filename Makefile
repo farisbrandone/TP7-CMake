@@ -85,6 +85,51 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vboxuser/training-linux/TP7-CMake/CMakeFiles /home/vboxuser/training-linux/TP7-CMake//CMakeFiles/progress.marks
@@ -143,38 +188,50 @@ calculatriceDyn/fast:
 .PHONY : calculatriceDyn/fast
 
 #=============================================================================
-# Target rules for targets named exeWithStatLib
+# Target rules for targets named exe
 
 # Build rule for target.
-exeWithStatLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exeWithStatLib
-.PHONY : exeWithStatLib
+exe: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exe
+.PHONY : exe
 
 # fast build rule for target.
-exeWithStatLib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exeWithStatLib.dir/build.make CMakeFiles/exeWithStatLib.dir/build
-.PHONY : exeWithStatLib/fast
+exe/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/build
+.PHONY : exe/fast
 
 #=============================================================================
-# Target rules for targets named exeWithDynLib
+# Target rules for targets named run
 
 # Build rule for target.
-exeWithDynLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 exeWithDynLib
-.PHONY : exeWithDynLib
+run: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run
+.PHONY : run
 
 # fast build rule for target.
-exeWithDynLib/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exeWithDynLib.dir/build.make CMakeFiles/exeWithDynLib.dir/build
-.PHONY : exeWithDynLib/fast
+run/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
+.PHONY : run/fast
+
+#=============================================================================
+# Target rules for targets named clean-all
+
+# Build rule for target.
+clean-all: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean-all
+.PHONY : clean-all
+
+# fast build rule for target.
+clean-all/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean-all.dir/build.make CMakeFiles/clean-all.dir/build
+.PHONY : clean-all/fast
 
 src/app/main.o: src/app/main.c.o
 .PHONY : src/app/main.o
 
 # target to build an object file
 src/app/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exeWithStatLib.dir/build.make CMakeFiles/exeWithStatLib.dir/src/app/main.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exeWithDynLib.dir/build.make CMakeFiles/exeWithDynLib.dir/src/app/main.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/app/main.c.o
 .PHONY : src/app/main.c.o
 
 src/app/main.i: src/app/main.c.i
@@ -182,8 +239,7 @@ src/app/main.i: src/app/main.c.i
 
 # target to preprocess a source file
 src/app/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exeWithStatLib.dir/build.make CMakeFiles/exeWithStatLib.dir/src/app/main.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exeWithDynLib.dir/build.make CMakeFiles/exeWithDynLib.dir/src/app/main.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/app/main.c.i
 .PHONY : src/app/main.c.i
 
 src/app/main.s: src/app/main.c.s
@@ -191,36 +247,56 @@ src/app/main.s: src/app/main.c.s
 
 # target to generate assembly for a file
 src/app/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exeWithStatLib.dir/build.make CMakeFiles/exeWithStatLib.dir/src/app/main.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/exeWithDynLib.dir/build.make CMakeFiles/exeWithDynLib.dir/src/app/main.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/app/main.c.s
 .PHONY : src/app/main.c.s
 
-src/includes/calculatrice.o: src/includes/calculatrice.c.o
-.PHONY : src/includes/calculatrice.o
+src/lib/calculatriceDyn/calculatriceDyn.o: src/lib/calculatriceDyn/calculatriceDyn.c.o
+.PHONY : src/lib/calculatriceDyn/calculatriceDyn.o
 
 # target to build an object file
-src/includes/calculatrice.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceStat.dir/build.make CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceDyn.dir/build.make CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o
-.PHONY : src/includes/calculatrice.c.o
+src/lib/calculatriceDyn/calculatriceDyn.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceDyn.dir/build.make CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o
+.PHONY : src/lib/calculatriceDyn/calculatriceDyn.c.o
 
-src/includes/calculatrice.i: src/includes/calculatrice.c.i
-.PHONY : src/includes/calculatrice.i
+src/lib/calculatriceDyn/calculatriceDyn.i: src/lib/calculatriceDyn/calculatriceDyn.c.i
+.PHONY : src/lib/calculatriceDyn/calculatriceDyn.i
 
 # target to preprocess a source file
-src/includes/calculatrice.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceStat.dir/build.make CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.i
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceDyn.dir/build.make CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.i
-.PHONY : src/includes/calculatrice.c.i
+src/lib/calculatriceDyn/calculatriceDyn.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceDyn.dir/build.make CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.i
+.PHONY : src/lib/calculatriceDyn/calculatriceDyn.c.i
 
-src/includes/calculatrice.s: src/includes/calculatrice.c.s
-.PHONY : src/includes/calculatrice.s
+src/lib/calculatriceDyn/calculatriceDyn.s: src/lib/calculatriceDyn/calculatriceDyn.c.s
+.PHONY : src/lib/calculatriceDyn/calculatriceDyn.s
 
 # target to generate assembly for a file
-src/includes/calculatrice.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceStat.dir/build.make CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.s
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceDyn.dir/build.make CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.s
-.PHONY : src/includes/calculatrice.c.s
+src/lib/calculatriceDyn/calculatriceDyn.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceDyn.dir/build.make CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.s
+.PHONY : src/lib/calculatriceDyn/calculatriceDyn.c.s
+
+src/lib/calculatriceStat/calculatriceStat.o: src/lib/calculatriceStat/calculatriceStat.c.o
+.PHONY : src/lib/calculatriceStat/calculatriceStat.o
+
+# target to build an object file
+src/lib/calculatriceStat/calculatriceStat.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceStat.dir/build.make CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o
+.PHONY : src/lib/calculatriceStat/calculatriceStat.c.o
+
+src/lib/calculatriceStat/calculatriceStat.i: src/lib/calculatriceStat/calculatriceStat.c.i
+.PHONY : src/lib/calculatriceStat/calculatriceStat.i
+
+# target to preprocess a source file
+src/lib/calculatriceStat/calculatriceStat.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceStat.dir/build.make CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.i
+.PHONY : src/lib/calculatriceStat/calculatriceStat.c.i
+
+src/lib/calculatriceStat/calculatriceStat.s: src/lib/calculatriceStat/calculatriceStat.c.s
+.PHONY : src/lib/calculatriceStat/calculatriceStat.s
+
+# target to generate assembly for a file
+src/lib/calculatriceStat/calculatriceStat.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/calculatriceStat.dir/build.make CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.s
+.PHONY : src/lib/calculatriceStat/calculatriceStat.c.s
 
 # Help Target
 help:
@@ -229,17 +305,25 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... clean-all"
+	@echo "... run"
 	@echo "... calculatriceDyn"
 	@echo "... calculatriceStat"
-	@echo "... exeWithDynLib"
-	@echo "... exeWithStatLib"
+	@echo "... exe"
 	@echo "... src/app/main.o"
 	@echo "... src/app/main.i"
 	@echo "... src/app/main.s"
-	@echo "... src/includes/calculatrice.o"
-	@echo "... src/includes/calculatrice.i"
-	@echo "... src/includes/calculatrice.s"
+	@echo "... src/lib/calculatriceDyn/calculatriceDyn.o"
+	@echo "... src/lib/calculatriceDyn/calculatriceDyn.i"
+	@echo "... src/lib/calculatriceDyn/calculatriceDyn.s"
+	@echo "... src/lib/calculatriceStat/calculatriceStat.o"
+	@echo "... src/lib/calculatriceStat/calculatriceStat.i"
+	@echo "... src/lib/calculatriceStat/calculatriceStat.s"
 .PHONY : help
 
 

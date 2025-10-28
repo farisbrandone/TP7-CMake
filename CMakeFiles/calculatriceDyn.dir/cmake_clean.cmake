@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o"
-  "CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o.d"
-  "src/lib/libcalculatriceDyn.pdb"
-  "src/lib/libcalculatriceDyn.so"
+  "CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o"
+  "CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o.d"
+  "src/lib/calculatriceDyn/libcalculatriceDyn.pdb"
+  "src/lib/calculatriceDyn/libcalculatriceDyn.so"
+  "src/lib/calculatriceDyn/libcalculatriceDyn.so.1"
 )
 
 # Per-language clean rules from dependency scanning.

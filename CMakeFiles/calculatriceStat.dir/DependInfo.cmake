@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/vboxuser/training-linux/TP7-CMake/src/includes/calculatrice.c" "CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o" "gcc" "CMakeFiles/calculatriceStat.dir/src/includes/calculatrice.c.o.d"
+  "/home/vboxuser/training-linux/TP7-CMake/src/lib/calculatriceStat/calculatriceStat.c" "CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o" "gcc" "CMakeFiles/calculatriceStat.dir/src/lib/calculatriceStat/calculatriceStat.c.o.d"
   )
 
 # Targets to which this target links.

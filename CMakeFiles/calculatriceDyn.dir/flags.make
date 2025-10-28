@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DcalculatriceDyn_EXPORTS
 
-C_INCLUDES = -I/home/vboxuser/training-linux/TP7-CMake/src/includes
+C_INCLUDES = -I/home/vboxuser/training-linux/TP7-CMake/src/lib/calculatriceDyn
 
-C_FLAGS =  -g -g -fPIC
+C_FLAGS =  -Wall -Wextra -g -fPIC -std=gnu11
 

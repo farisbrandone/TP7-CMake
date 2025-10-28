@@ -69,35 +69,39 @@ include CMakeFiles/calculatriceDyn.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/calculatriceDyn.dir/flags.make
 
-CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o: CMakeFiles/calculatriceDyn.dir/flags.make
-CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o: src/includes/calculatrice.c
-CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o: CMakeFiles/calculatriceDyn.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/training-linux/TP7-CMake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o -MF CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o.d -o CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o -c /home/vboxuser/training-linux/TP7-CMake/src/includes/calculatrice.c
+CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o: CMakeFiles/calculatriceDyn.dir/flags.make
+CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o: src/lib/calculatriceDyn/calculatriceDyn.c
+CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o: CMakeFiles/calculatriceDyn.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vboxuser/training-linux/TP7-CMake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o -MF CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o.d -o CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o -c /home/vboxuser/training-linux/TP7-CMake/src/lib/calculatriceDyn/calculatriceDyn.c
 
-CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vboxuser/training-linux/TP7-CMake/src/includes/calculatrice.c > CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.i
+CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vboxuser/training-linux/TP7-CMake/src/lib/calculatriceDyn/calculatriceDyn.c > CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.i
 
-CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vboxuser/training-linux/TP7-CMake/src/includes/calculatrice.c -o CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.s
+CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vboxuser/training-linux/TP7-CMake/src/lib/calculatriceDyn/calculatriceDyn.c -o CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.s
 
 # Object files for target calculatriceDyn
 calculatriceDyn_OBJECTS = \
-"CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o"
+"CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o"
 
 # External object files for target calculatriceDyn
 calculatriceDyn_EXTERNAL_OBJECTS =
 
-src/lib/libcalculatriceDyn.so: CMakeFiles/calculatriceDyn.dir/src/includes/calculatrice.c.o
-src/lib/libcalculatriceDyn.so: CMakeFiles/calculatriceDyn.dir/build.make
-src/lib/libcalculatriceDyn.so: CMakeFiles/calculatriceDyn.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vboxuser/training-linux/TP7-CMake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library src/lib/libcalculatriceDyn.so"
+src/lib/calculatriceDyn/libcalculatriceDyn.so.1: CMakeFiles/calculatriceDyn.dir/src/lib/calculatriceDyn/calculatriceDyn.c.o
+src/lib/calculatriceDyn/libcalculatriceDyn.so.1: CMakeFiles/calculatriceDyn.dir/build.make
+src/lib/calculatriceDyn/libcalculatriceDyn.so.1: CMakeFiles/calculatriceDyn.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vboxuser/training-linux/TP7-CMake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C shared library src/lib/calculatriceDyn/libcalculatriceDyn.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/calculatriceDyn.dir/link.txt --verbose=$(VERBOSE)
+	$(CMAKE_COMMAND) -E cmake_symlink_library src/lib/calculatriceDyn/libcalculatriceDyn.so.1 src/lib/calculatriceDyn/libcalculatriceDyn.so.1 src/lib/calculatriceDyn/libcalculatriceDyn.so
+
+src/lib/calculatriceDyn/libcalculatriceDyn.so: src/lib/calculatriceDyn/libcalculatriceDyn.so.1
+	@$(CMAKE_COMMAND) -E touch_nocreate src/lib/calculatriceDyn/libcalculatriceDyn.so
 
 # Rule to build all files generated by this target.
-CMakeFiles/calculatriceDyn.dir/build: src/lib/libcalculatriceDyn.so
+CMakeFiles/calculatriceDyn.dir/build: src/lib/calculatriceDyn/libcalculatriceDyn.so
 .PHONY : CMakeFiles/calculatriceDyn.dir/build
 
 CMakeFiles/calculatriceDyn.dir/clean:

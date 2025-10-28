@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "src/lib/libcalculatriceStat.a"
+  "src/lib/calculatriceStat/libcalculatriceStat.a"
 )

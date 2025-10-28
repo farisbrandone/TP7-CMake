@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/home/vboxuser/training-linux/TP7-CMake/src/includes
+C_INCLUDES = -I/home/vboxuser/training-linux/TP7-CMake/src/lib/calculatriceStat
 
-C_FLAGS =  -g -g
+C_FLAGS =  -Wall -Wextra -g -fPIC -std=gnu11
 
